@@ -7,9 +7,13 @@ const TOKEN = process.env.BOT_TOKEN;
 const fs = require('fs');
 const path = require('path');
 const https = require("https");
-const ontime = require('ontime')
+const ontime = require('ontime');
 
 const {debug, loadJSON, helloWorld} = require ('./helpers');
+
+require('http').createServer().listen(process.env.PORT || 5000).on('request', function(req, res){
+    res.end('')
+})﻿
 
 console.log('Bot has been started');
 
