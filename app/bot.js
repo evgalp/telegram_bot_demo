@@ -2,7 +2,7 @@
 process.env["NTBA_FIX_319"] = 1;
 
 const TelegramBot = require ('node-telegram-bot-api');
-const TOKEN = "588568875:AAG-7lwiOAxZXHgiPvnAYz2G6ZmDj-0fR-E";
+const TOKEN = process.env.BOT_TOKEN;
 
 const fs = require('fs');
 const path = require('path');
