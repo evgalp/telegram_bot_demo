@@ -11,7 +11,8 @@ const ontime = require('ontime');
 
 const {debug, loadJSON, helloWorld} = require ('./helpers');
 
-require('http').createServer().listen(process.env.PORT || 5000).on('request', function(req, res){
+// prevent crash in 60sec
+https.createServer().listen(process.env.PORT || 5000).on('request', function(req, res){
     res.end('')
 })﻿
 
@@ -69,7 +70,7 @@ bot.onText(/\/pic/, function (msg) {
 // ontime
 
 ontime({
-    cycle: [ '00:00', '30:00' ]
+    cycle: [ '00:00', '15:00', '30:00', '45:00']
 }, function (ot) {
   const url =
     "https://api.chucknorris.io/jokes/random";
